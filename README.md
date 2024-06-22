@@ -1,4 +1,16 @@
 # Image-compression_using_neural_networks
-This project converts an RGB image (3-dimensional matrix image) to an extremely low number of neurons and then regenerates the picture from these neurons. It uses a neural network architecture called an AutoEncder, It consists of two similar but reversed components called an Encoder and a decoder. you can see the architecture below.
-for the encoder, we use a Convolutional Neural Network and max-pooling at first and then we flatten this architecture to a feed-forward neural network in order to reach the maximum compression possible. and then we do the same thing reversed for the decoder.
-the middle hidden layer between the encoder and the decoder is called the latent space. it's the neurons that represent the image and store its features. we can utilize this project in places of poor internet connection where the sender can have the encoder compress the image to its latent space and send it to the receiver who decompresses these images using the decoder he has. you can see examples of compressed images and their original copies here. 
+This project focuses on converting images to a lower number of neurons and then regenerating the images from these neurons using an AutoEncoder neural network architecture. An AutoEncoder consists of two main components: an Encoder and a Decoder. Below is a detailed overview of the architecture and methodology used in this project.
+
+# Project Overview
+The primary goal of this project is to compress images and then accurately reconstruct them. The dataset used for this project is the MNIST dataset, which contains images of handwritten digits. Two neural network architectures were utilized for this compression and reconstruction process:
+# 1. Using Feedforward neural networks:
+    Compression: The images are first flattened and then compressed in the Encoder. The images are compressed to 25% of their original size.
+    Reconstruction: The compressed images are then regenerated through the Decoder. 
+    Results: Below, you can see a comparison of the original images and their regenerated versions.
+# 2. Using CNNS:
+    Compression: The Encoder uses a Convolutional Neural Network with max-pooling to initially compress the images. This architecture is then flattened into a feedforward neural network to achieve maximum compression. The middle hidden layer between the Encoder and the Decoder is called the latent space, which consists of neurons that represent and store the image's features.
+    Reconstruction: The Decoder reverses the process, regenerating the images from the compressed representation.
+    Results: Below, you can see a comparison of the original images and their regenerated versions using the CNN architecture. 
+
+# Applications:
+    This project can be particularly useful in areas with poor internet connections. The sender can use the Encoder to compress the image and send it to the receiver. The receiver can then decompress the images using the Decoder they have. This method significantly reduces the size of the data being transmitted, making it ideal for low-bandwidth scenarios.
