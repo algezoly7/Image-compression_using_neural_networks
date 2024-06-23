@@ -13,7 +13,9 @@ The primary goal of this project is to compress images and then accurately recon
 # 2. Using CNNS:
   + Compression: The Encoder uses a Convolutional Neural Network with max-pooling to initially compress the images. This architecture is then flattened into a feedforward neural network to achieve maximum compression. The middle hidden layer between the Encoder and the Decoder is called the latent space, which consists of neurons that represent and store the image's features.
   + Reconstruction: The Decoder reverses the process, regenerating the images from the compressed representation.
-  + Results: Below, you can see a comparison of the original images and their regenerated versions using the CNN architecture. 
+  + Results: Below, you can see a comparison of the original images and their regenerated versions using the CNN architecture.
+
+    ![github_pic2](https://github.com/algezoly7/Image-compression_using_neural_networks/assets/63818969/a0163299-764a-4eaf-9041-ab784c015bf3)
 
 # Applications:
   This project can be particularly useful in areas with poor internet connections. The sender can use the Encoder to compress the image and send it to the receiver. The receiver can then decompress the images using the Decoder they have. This method significantly reduces the size of the data being transmitted, making it ideal for low-bandwidth scenarios.
